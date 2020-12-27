@@ -1,0 +1,55 @@
+{
+    "name": "superrosko/example-php-composer",
+    "description": "PHP's algorithms.",
+    "homepage": "https://github.com/superrosko/example-php-composer",
+    "license": "MIT",
+    "version": "0.0.1",
+    "authors": [
+        {
+            "name": "Dmitriy Bespalov",
+            "email": "dbespalov.rosko@gmail.com",
+            "homepage": "https://rdevelab.ru",
+            "role": "Developer"
+        }
+    ],
+    "keywords": [
+        "php",
+        "composer"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Superrosko\\ExamplePhpComposer\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "codeception/codeception": "^4.1",
+        "codeception/module-asserts": "^1.3",
+        "friendsofphp/php-cs-fixer": "^2.17",
+        "psalm/plugin-phpunit": "^0.15",
+        "vimeo/psalm": "^4.3.1",
+        "codeception/module-phpbrowser": "^1.0.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "scripts": {
+        "check-style": "set PHP_CS_FIXER_IGNORE_ENV=1 && php-cs-fixer fix --dry-run --diff",
+        "fix-style": "set PHP_CS_FIXER_IGNORE_ENV=1 && php-cs-fixer fix",
+        "static-analysis": "psalm --shepherd --stats",
+        "static-analysis-log": "psalm --no-cache --show-info=true",
+        "test": "codecept run",
+        "coverage-html": "codecept run --coverage --coverage-html",
+        "coverage-xml": "codecept run --coverage --coverage-xml",
+        "codecov-push": "bash -c \"bash <(curl -s https://codecov.io/bash)\""
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
