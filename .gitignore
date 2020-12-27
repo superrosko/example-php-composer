@@ -1,0 +1,11 @@
+# Dependency directories
+/vendor
+
+# IDE
+.idea
+
+# Tmp and env files
+.php_cs.cache
+.env
+composer.lock
+composer.phar
