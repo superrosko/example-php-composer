@@ -1,6 +1,6 @@
 {
     "name": "superrosko/example-php-composer",
-    "description": "PHP's algorithms.",
+    "description": "A simple example of composer package with php-cs-fixer, psalm, codeception.",
     "homepage": "https://github.com/superrosko/example-php-composer",
     "license": "MIT",
     "version": "0.0.1",
